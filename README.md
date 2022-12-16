@@ -16,7 +16,9 @@ ALLOWED_HOSTS="\*"
 
 # Create virtualenv with python 3.8
 
-pip install virtualenv virtualenv venv --python="/usr/bin/3.8"
+pip install virtualenv\
+virtualenv venv --python="/usr/bin/3.8"\
+source ./venv/bin/activate
 
 # Install dependencies
 
@@ -24,7 +26,7 @@ pip install requirements.txt
 
 # Set the database and cache containers
 
-docker compose up
+docker compose up -d
 
 # Run application 😀
 
